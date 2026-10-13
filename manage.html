@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stations &amp; Chargers | EV Charge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<script>try{var t=localStorage.getItem("ev-theme");if(t&&t!=="auto")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+</head>
+<body data-roles="operator,admin" data-nav="manage.html">
+<div class="app">
+  <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+    <div class="brand"><span class="logo"><svg class="icon" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg></span><span>EV Charge<small>Station management</small></span></div>
+    <nav class="nav" id="nav"></nav>
+    <div class="side-foot" id="sideFoot"></div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+  <div class="main">
+    <header class="topbar">
+      <button class="btn icon-btn menu-btn" id="menuBtn" aria-label="Open navigation"></button>
+      <div class="spacer"></div>
+      <label class="row role-lbl muted" for="roleSel" style="font-size:.82rem">Demo role</label>
+      <select class="input ctl" id="roleSel" style="width:auto;min-width:130px" aria-label="Demo role">
+        <option value="user">EV Driver</option><option value="operator">Station Operator</option><option value="admin">Admin</option>
+      </select>
+      <button class="btn icon-btn" id="themeBtn" aria-label="Toggle dark and light mode"></button>
+    </header>
+    <div class="demo-banner">Demo mode: all data is sample data stored in this browser tab. No backend is connected and no real payments or chargers are involved.</div>
+    <main class="content" id="view"></main>
+  </div>
+</div>
+<div class="toast-wrap" id="toasts" aria-live="polite"></div>
+<dialog id="dlg"></dialog>
+<script src="js/common.js"></script>
+<script src="js/pages/manage.js"></script>
+</body>
+</html>

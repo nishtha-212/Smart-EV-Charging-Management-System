@@ -1,0 +1,13 @@
+iw nat <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>EV Charge</title>
+<script>
+try{var s=JSON.parse(sessionStorage.getItem("ev-demo-state-v1")||"null");var r=s&&s.role?s.role:"user";
+location.replace({user:"dashboard.html",operator:"operator-dashboard.html",admin:"admin-dashboard.html"}[r]||"dashboard.html");}
+catch(e){location.replace("dashboard.html");}
+</script>
+</head>
+<body><a href="dashboard.html">Open the app</a></body>
+</html>
